@@ -33,7 +33,7 @@ export default function HomePage() {
             </div>
 
             {/* Authentication Component */}
-            <div className="cyber-card p-8 rounded-lg max-w-md w-full">
+            <div className="max-w-md w-full">
               <WalletAuthButton />
             </div>
           </div>

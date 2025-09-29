@@ -152,30 +152,40 @@ export function WalletAuthButton() {
   // Initial selection
   return (
     <div className="space-y-6">
-      <div className="space-y-4">
+      <div className="flex flex-col items-center" style={{ gap: '24px' }}>
+        {/* Base Account Button - Following Official Brand Guidelines */}
         <button
           onClick={connectBaseAccount}
-          className="w-full p-6 cyber-card hover:border-cyber-blue transition-all duration-300 rounded-lg group"
+          className="flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded-lg transition-all duration-300 group"
+          style={{ padding: '20px 40px', width: '320px' }}
         >
-          <div className="flex items-center justify-center">
-            <span className="text-2xl group-hover:scale-110 transition-transform">🟦</span>
-            <div style={{ width: '20px' }}></div>
-            <div className="font-bold cyber-text-primary text-lg">
-              Sign in with Base
-            </div>
+          {/* Official Base Logo - Blue square on light background */}
+          <div 
+            className="w-5 h-5 group-hover:scale-105 transition-transform"
+            style={{ backgroundColor: '#0000FF' }}
+          ></div>
+          <div style={{ width: '12px' }}></div>
+          <div className="font-semibold text-gray-900 text-lg">
+            Sign in with Base
           </div>
         </button>
 
+        {/* Email Button - Visually Consistent */}
         <button
           onClick={() => setAuthStep('email')}
-          className="w-full p-6 cyber-card hover:border-cyber-secondary transition-all duration-300 rounded-lg group"
+          className="flex items-center justify-center bg-white hover:bg-gray-100 border border-gray-300 rounded-lg transition-all duration-300 group"
+          style={{ padding: '20px 40px', width: '320px' }}
         >
-          <div className="flex items-center justify-center">
-            <span className="text-2xl group-hover:scale-110 transition-transform">📧</span>
-            <div style={{ width: '20px' }}></div>
-            <div className="font-bold cyber-text-secondary text-lg">
-              Sign in with email
-            </div>
+          {/* Email Icon */}
+          <div className="w-5 h-5 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#374151" strokeWidth="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div style={{ width: '12px' }}></div>
+          <div className="font-semibold text-gray-900 text-lg">
+            Sign in with Email
           </div>
         </button>
       </div>
